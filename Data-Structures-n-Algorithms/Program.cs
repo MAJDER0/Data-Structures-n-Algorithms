@@ -12,9 +12,11 @@ namespace Data_Structures_n_Algorithms
         static void Main(string[] args)
         {
 
+            int[] listOfNumbers = {23,4,2,6,21,6,2,76,2,5467};
+
+
             /* ---------- Bubble Sort ---------- */
 
-            //int[] listOfNumbers = new int[] {23,4,2,6,21,6,2,76,2,5467};
             //string[] listOfFruits = { "banana", "apple", "pear", "orange" };
 
             //Bubble_Sort.Bubble(listOfNumbers); //Number Sorting - Standard Implementation
@@ -31,6 +33,16 @@ namespace Data_Structures_n_Algorithms
             //{
             //    Console.WriteLine(fruit);
             //}
+
+
+            /* ---------- Merge Sort ---------- */
+
+            Merge_Sort.Merge(listOfNumbers);
+
+            foreach (var number in listOfNumbers)
+            {
+                Console.WriteLine(number);
+            }
 
         }
     }

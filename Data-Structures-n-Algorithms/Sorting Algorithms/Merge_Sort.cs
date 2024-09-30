@@ -18,42 +18,44 @@ namespace Data_Structures_n_Algorithms.Sorting_Algorithms
         //Time Complexity: O(n log n) worst, O(n log n) average, O(n log n) best
         //Space Complexity: O(n)
 
+
+        //Implementation for an array of integers
+
         public static void Merge(int[] arrayOfNumbers)
         {
 
-            if (arrayOfNumbers.Length <= 1)
+            if (arrayOfNumbers.Length <= 1) //If there is one or less elements in the list, return it
                 return;
 
-            int mid = arrayOfNumbers.Length / 2;
+            int mid = arrayOfNumbers.Length / 2; //Find the middle of an array, and divide it into two halves
 
-            int[] left = new int[mid];
-            int[] right = new int[arrayOfNumbers.Length - mid];
+            int[] left = new int[mid]; //Create left sub-array 
+            int[] right = new int[arrayOfNumbers.Length - mid]; //Create right sub-array
 
             for (int i = 0; i < mid; i++)
             {
-                left[i] = arrayOfNumbers[i];
+                left[i] = arrayOfNumbers[i]; //Fill the left sub-array with the elements from the left half of the original array
             }
 
-            for (int i = mid; i < arrayOfNumbers.Length; i++)
+            for (int j = mid; j < arrayOfNumbers.Length; j++)
             {
-                right[i - mid] = arrayOfNumbers[i];
+                right[j - mid] = arrayOfNumbers[j]; //Fill the right sub-array with the elements from the right half of the original array
             }
 
-            Merge(left);
-            Merge(right);
+            Merge(left); //Recursively sort the left sub-array
+            Merge(right); //Recursively sort the right sub-array
 
-            MergeSubProblems(arrayOfNumbers, left, right);
+            MergeSubProblems(arrayOfNumbers, left, right); //Merge the sorted left and right sub-array back into original array
 
         }
 
         private static void MergeSubProblems(int[] arrayOfNumbers, int[] left, int[] right)
         {
+            int i = 0, k = 0, j = 0;
 
-            int i=0, j = 0, k = 0;
-
-            while (i < left.Length && j < right.Length)
+            while (i < left.Length && j < right.Length) //Merge elemets from left and right sub-arrays until one is exhausted
             {
-
+                //Insert the smaller value into the main array
                 if (left[i] <= right[j])
                 {
                     arrayOfNumbers[k++] = left[i++];
@@ -65,12 +67,70 @@ namespace Data_Structures_n_Algorithms.Sorting_Algorithms
 
             }
 
+            //If there are remaining elements in the sub-array, add them to the main array
             while (i < left.Length)
                 arrayOfNumbers[k++] = left[i++];
 
             while (j < right.Length)
                 arrayOfNumbers[k++] = right[j++];
 
+        }
+
+
+
+        //Generic Implementation for any type
+
+        public static void Merge<T>(T[] listOfItems) where T : IComparable<T>
+        {
+            if (listOfItems.Length <= 1)
+                return;
+
+            int mid = listOfItems.Length / 2;
+
+            T[] left = new T[mid];
+            T[] right = new T[listOfItems.Length - mid];
+
+            for (int i = 0; i < mid; i++)
+            {
+                left[i] = listOfItems[i];
+            }
+
+            for (int i = mid; i < listOfItems.Length; i++)
+            {
+                right[i - mid] = listOfItems[i];
+            }
+
+            Merge(left);
+            Merge(right);
+
+            MergeSubProblems(listOfItems, left, right);
+
+        }
+
+
+        private static void MergeSubProblems<T>(T[] listOfItems, T[] left, T[] right) where T : IComparable<T>
+        {
+            int i = 0, j = 0, k = 0;
+
+            while (i < left.Length && j < right.Length)
+            {
+
+                if (left[i].CompareTo(right[j]) < 0 || left[i].CompareTo(right[j]) == -1)
+                {
+                    listOfItems[k++] = left[i++];
+                }
+                else
+                {
+                    listOfItems[k++] = right[j++];
+                }
+
+            }
+
+            while (i < left.Length)
+                listOfItems[k++] = left[i++];
+
+            while (j < right.Length)
+                listOfItems[k++] = right[j++];
         }
     }
 }

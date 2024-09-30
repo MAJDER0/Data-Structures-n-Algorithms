@@ -15,6 +15,39 @@ namespace Data_Structures_n_Algorithms.Sorting_Algorithms
         //Time Complexity: O(n^2) worst, O(n^2) average, O(n) best
         //Space Complexity: O(1)
 
+
+        //Implementation for an array of integers
+
+        public static int[] Bubble(int[] listOfNumbers)
+        {
+
+            bool swaped;
+
+            for (int i = 0; i < listOfNumbers.Length - 1; i++)
+            {
+                swaped = false;
+
+                for (int j = 0; j < listOfNumbers.Length - 1 - i; j++)
+                {
+                    if (listOfNumbers[j] > listOfNumbers[j + 1])
+                    {
+                        swaped = true;
+                        (listOfNumbers[j], listOfNumbers[j + 1]) = (listOfNumbers[j + 1], listOfNumbers[j]); //swap elements
+
+                    }
+                }
+
+                if (!swaped)
+                {
+                    break; //If no swaps occured, the list is already sorted
+                }
+            }
+
+            return listOfNumbers;
+        }
+
+
+
         //Generic implementation for any type
 
         public static T[] Bubble<T>(T[] listOfItems) where T: IComparable<T> {
@@ -41,35 +74,6 @@ namespace Data_Structures_n_Algorithms.Sorting_Algorithms
             }
 
             return listOfItems;
-        }
-
-        //Implementation for the list of ints
-
-        public static int[] Bubble(int[] listOfNumbers) {
-
-            bool swaped;
-
-            for (int i = 0; i < listOfNumbers.Length-1; i++)
-            {
-                swaped = false;
-
-                for (int j = 0; j < listOfNumbers.Length-1-i; j++)
-                {
-                    if (listOfNumbers[j] > listOfNumbers[j + 1]) 
-                    {
-                        swaped = true;
-                        (listOfNumbers[j],listOfNumbers[j + 1]) = (listOfNumbers[j+1],listOfNumbers[j]); //swap elements
-                    
-                    }
-                }
-
-                if (!swaped)
-                {
-                    break; //If no swaps occured, the list is already sorted
-                }
-            }
-
-            return listOfNumbers;
         }
     }
 }

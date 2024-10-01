@@ -9,13 +9,19 @@ namespace Data_Structures_n_Algorithms.Sorting_Algorithms
 {
     public class Merge_Sort
     {
+
         // 5 6 1 3 
         // 5 6   1 3
         // 5   6   1   3
         // 56   13
         // 1356
 
-        //Time Complexity: O(n log n) worst, O(n log n) average, O(n log n) best
+        //Time Complexity:
+
+        //Worst Case: O(n log n)
+        //Average Case: O(n log n)
+        //Best Case: O(n log n)
+
         //Space Complexity: O(n)
 
 

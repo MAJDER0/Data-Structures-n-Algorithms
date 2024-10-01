@@ -12,7 +12,12 @@ namespace Data_Structures_n_Algorithms.Sorting_Algorithms
 
         // 5 6 1 3 --> 5 1 6 3 --> 5 1 3 6 --> 1 5 3 6 --> 1 3 5 6 
 
-        //Time Complexity: O(n^2) worst, O(n^2) average, O(n) best
+        //Time Complexity:
+
+        //Worst Case: O(n^2) - when the array is sorted in reverse order
+        //Average Case: O(n^2)
+        //Best Case: O(n) - when the array is already sorted
+
         //Space Complexity: O(1)
 
 
@@ -48,7 +53,7 @@ namespace Data_Structures_n_Algorithms.Sorting_Algorithms
 
 
 
-        //Generic implementation for any type
+        //Generic Implementation for any type
 
         public static T[] Bubble<T>(T[] listOfItems) where T: IComparable<T> {
 
@@ -63,12 +68,12 @@ namespace Data_Structures_n_Algorithms.Sorting_Algorithms
                     if (listOfItems[j].CompareTo(listOfItems[j+1])>0)
                     {
                         swaped = true;
-                        (listOfItems[j], listOfItems[j + 1]) = (listOfItems[j+1], listOfItems[j]); //swap elements
+                        (listOfItems[j], listOfItems[j + 1]) = (listOfItems[j+1], listOfItems[j]); 
                     }
                 }
 
                 if (!swaped) {
-                    break; //If no swaps occured, the list is already sorted
+                    break; 
                 }
 
             }

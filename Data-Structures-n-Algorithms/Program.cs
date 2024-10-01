@@ -22,11 +22,6 @@ namespace Data_Structures_n_Algorithms
             //Bubble_Sort.Bubble(listOfNumbers); //Number Sorting - Standard Implementation
             //Bubble_Sort.Bubble(listOfFruits); //Generic Sorting
 
-            //foreach (int number in listOfNumbers)
-            //{
-            //    Console.WriteLine(number);
-            //}
-
             //Console.WriteLine("\n");
 
             //foreach (var fruit in listOfFruits)
@@ -35,9 +30,18 @@ namespace Data_Structures_n_Algorithms
             //}
 
 
+
             /* ---------- Merge Sort ---------- */
 
-            Merge_Sort.Merge(listOfNumbers);
+            //Merge_Sort.Merge(listOfNumbers);
+
+
+
+            /* ---------- Insertion Sort ---------- */
+
+            Insertion_Sort.Insertion(listOfNumbers);
+
+
 
             foreach (var number in listOfNumbers)
             {

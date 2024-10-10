@@ -83,7 +83,6 @@ namespace Data_Structures_n_Algorithms.Sorting_Algorithms
         }
 
 
-
         //Generic Implementation for any type
 
         public static void Merge<T>(T[] listOfItems) where T : IComparable<T>

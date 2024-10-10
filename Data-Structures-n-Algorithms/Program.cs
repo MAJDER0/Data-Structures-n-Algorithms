@@ -39,8 +39,12 @@ namespace Data_Structures_n_Algorithms
 
             /* ---------- Insertion Sort ---------- */
 
-            Insertion_Sort.Insertion(listOfNumbers);
+            //Insertion_Sort.Insertion(listOfNumbers);
 
+
+            /* ---------- Selection Sort ---------- */
+
+            Selection_Sort.Selection(listOfNumbers);
 
 
             foreach (var number in listOfNumbers)

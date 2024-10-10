@@ -48,6 +48,7 @@
     <Compile Include="Sorting Algorithms\Bubble_Sort.cs" />
     <Compile Include="Sorting Algorithms\Insertion_Sort.cs" />
     <Compile Include="Sorting Algorithms\Merge_Sort.cs" />
+    <Compile Include="Sorting Algorithms\Selection_Sort.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

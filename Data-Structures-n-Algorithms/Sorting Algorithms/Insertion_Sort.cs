@@ -46,7 +46,6 @@ namespace Data_Structures_n_Algorithms.Sorting_Algorithms
         }
 
 
-
         //Generic Implementation for any type
         public static void Insertion<T>(T[] arrayOfItems) where T : IComparable<T> {
 

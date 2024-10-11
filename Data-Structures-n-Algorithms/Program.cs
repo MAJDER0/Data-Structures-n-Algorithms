@@ -12,7 +12,7 @@ namespace Data_Structures_n_Algorithms
         static void Main(string[] args)
         {
 
-            int[] listOfNumbers = {23,4,2,6,21,6,2,76,2,5467};
+            int[] listOfNumbers = {23,4,2,6,21,6,2,76,2,5467,342,5,23,65,213,56,12,564,12,4536,1,234,567,123,45,2,65,1,567,1,46,2346,567};
 
 
             /* ---------- Bubble Sort ---------- */
@@ -44,7 +44,12 @@ namespace Data_Structures_n_Algorithms
 
             /* ---------- Selection Sort ---------- */
 
-            Selection_Sort.Selection(listOfNumbers);
+            //Selection_Sort.Selection(listOfNumbers);
+
+
+            /* ---------- Quick Sort ---------- */
+
+            Quick_Sort.Quick(listOfNumbers,0,listOfNumbers.Length-1);
 
 
             foreach (var number in listOfNumbers)

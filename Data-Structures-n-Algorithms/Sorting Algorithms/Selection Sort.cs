@@ -23,8 +23,8 @@ namespace Data_Structures_n_Algorithms.Sorting_Algorithms
         //Space Complexity: O(1) 
 
         //Implementation for an array of integers
-        public static void Selection(int[] arrayOfNumbers)
-        {
+
+        public static void Selection(int[] arrayOfNumbers) {
             for (int i = 0; i < arrayOfNumbers.Length-1; i++) 
             {
                 int min  = i;
@@ -44,8 +44,8 @@ namespace Data_Structures_n_Algorithms.Sorting_Algorithms
 
 
         //Generic Implementation for any type
-        public static void Selection<T>(T[] arrayOfItems) where T : IComparable<T> 
-        {
+
+        public static void Selection<T>(T[] arrayOfItems) where T : IComparable<T> {
             for (int i = 0; i < arrayOfItems.Length-1; i++)
             {
                 int min = i;

@@ -27,8 +27,7 @@ namespace Data_Structures_n_Algorithms.Sorting_Algorithms
 
         //Implementation for an array of integers
 
-        public static void Merge(int[] arrayOfNumbers)
-        {
+        public static void Merge(int[] arrayOfNumbers) {
 
             if (arrayOfNumbers.Length <= 1) //If there is one or less elements in the list, return it
                 return;
@@ -55,8 +54,7 @@ namespace Data_Structures_n_Algorithms.Sorting_Algorithms
 
         }
 
-        private static void MergeSubProblems(int[] arrayOfNumbers, int[] left, int[] right)
-        {
+        private static void MergeSubProblems(int[] arrayOfNumbers, int[] left, int[] right) {
             int i = 0, k = 0, j = 0;
 
             while (i < left.Length && j < right.Length) //Merge elemets from left and right sub-arrays until one is exhausted
@@ -85,8 +83,7 @@ namespace Data_Structures_n_Algorithms.Sorting_Algorithms
 
         //Generic Implementation for any type
 
-        public static void Merge<T>(T[] listOfItems) where T : IComparable<T>
-        {
+        public static void Merge<T>(T[] listOfItems) where T : IComparable<T> {
             if (listOfItems.Length <= 1)
                 return;
 
@@ -113,8 +110,7 @@ namespace Data_Structures_n_Algorithms.Sorting_Algorithms
         }
 
 
-        private static void MergeSubProblems<T>(T[] listOfItems, T[] left, T[] right) where T : IComparable<T>
-        {
+        private static void MergeSubProblems<T>(T[] listOfItems, T[] left, T[] right) where T : IComparable<T> {
             int i = 0, j = 0, k = 0;
 
             while (i < left.Length && j < right.Length)

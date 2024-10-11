@@ -28,8 +28,8 @@ namespace Data_Structures_n_Algorithms.Sorting_Algorithms
         //Space Complexity: O(1) - sorting is done in-place, no extra memory required
 
         //Implementation for an array of integers
-        public static void Insertion(int[] arrayOfIntegers)
-        {
+
+        public static void Insertion(int[] arrayOfIntegers) {
 
             for (int i = 1; i < arrayOfIntegers.Length; i++) // starting at second element. The first one is considered pre-sorted
             {
@@ -47,6 +47,7 @@ namespace Data_Structures_n_Algorithms.Sorting_Algorithms
 
 
         //Generic Implementation for any type
+
         public static void Insertion<T>(T[] arrayOfItems) where T : IComparable<T> {
 
             for (int i = 1; i < arrayOfItems.Length; i++) { 

@@ -23,8 +23,7 @@ namespace Data_Structures_n_Algorithms.Sorting_Algorithms
 
         //Implementation for an array of integers
 
-        public static int[] Bubble(int[] listOfNumbers)
-        {
+        public static int[] Bubble(int[] listOfNumbers) {
 
             bool swaped;
 

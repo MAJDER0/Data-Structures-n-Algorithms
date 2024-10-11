@@ -19,3 +19,6 @@
 **/vs/debug
 .vs
 /.vs
+*.suo
+bin
+obj

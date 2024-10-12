@@ -22,3 +22,7 @@
 *.suo
 bin
 obj
+/Data-Structures-n-Algorithms/bin
+/Data-Structures-n-Algorithms/obj
+/Data-Structures-n-Algorithms/.vs
+/Data-Structures-n-Algorithms/vs

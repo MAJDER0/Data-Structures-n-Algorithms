@@ -1,4 +1,5 @@
-﻿using Data_Structures_n_Algorithms.Sorting_Algorithms;
+﻿using Data_Structures_n_Algorithms.Algorithms.Sorting_Algorithms;
+using Data_Structures_n_Algorithms.Sorting_Algorithms;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,8 @@ namespace Data_Structures_n_Algorithms
         {
 
             int[] listOfNumbers = {23,4,2,6,21,6,2,76,2,5467,342,5,23,65,213,56,12,564,12,4536,1,234,567,123,45,2,65,1,567,1,46,2346,567};
+
+            //int[] listOfNumbers = {-234,-54,-45,-453,-45,-76,-87,-45,-12434,-54645,-23423,-546,-676,-67543,-56443};
 
 
             /* ---------- Bubble Sort ---------- */
@@ -49,7 +52,12 @@ namespace Data_Structures_n_Algorithms
 
             /* ---------- Quick Sort ---------- */
 
-            Quick_Sort.Quick(listOfNumbers,0,listOfNumbers.Length-1);
+            //Quick_Sort.Quick(listOfNumbers,0,listOfNumbers.Length-1);
+
+
+            /* ---------- Counting Sort ---------- */
+
+            listOfNumbers = Counting_Sort.Counting(listOfNumbers);
 
 
             foreach (var number in listOfNumbers)

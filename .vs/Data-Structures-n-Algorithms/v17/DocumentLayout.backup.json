@@ -3,24 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Gabi\\source\\repos\\Data-Structures-n-Algorithms\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1402E636-03EC-48E9-939E-E8A01CB2B2DE}|Data-Structures-n-Algorithms\\Data-Structures-n-Algorithms.csproj|c:\\users\\gabi\\source\\repos\\data-structures-n-algorithms\\data-structures-n-algorithms\\sorting algorithms\\merge_sort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1402E636-03EC-48E9-939E-E8A01CB2B2DE}|Data-Structures-n-Algorithms\\Data-Structures-n-Algorithms.csproj|solutionrelative:data-structures-n-algorithms\\sorting algorithms\\merge_sort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1402E636-03EC-48E9-939E-E8A01CB2B2DE}|Data-Structures-n-Algorithms\\Data-Structures-n-Algorithms.csproj|c:\\users\\gabi\\source\\repos\\data-structures-n-algorithms\\data-structures-n-algorithms\\sorting algorithms\\bubble_sort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1402E636-03EC-48E9-939E-E8A01CB2B2DE}|Data-Structures-n-Algorithms\\Data-Structures-n-Algorithms.csproj|solutionrelative:data-structures-n-algorithms\\sorting algorithms\\bubble_sort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1402E636-03EC-48E9-939E-E8A01CB2B2DE}|Data-Structures-n-Algorithms\\Data-Structures-n-Algorithms.csproj|c:\\users\\gabi\\source\\repos\\data-structures-n-algorithms\\data-structures-n-algorithms\\sorting algorithms\\insertion_sort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1402E636-03EC-48E9-939E-E8A01CB2B2DE}|Data-Structures-n-Algorithms\\Data-Structures-n-Algorithms.csproj|solutionrelative:data-structures-n-algorithms\\sorting algorithms\\insertion_sort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1402E636-03EC-48E9-939E-E8A01CB2B2DE}|Data-Structures-n-Algorithms\\Data-Structures-n-Algorithms.csproj|c:\\users\\gabi\\source\\repos\\data-structures-n-algorithms\\data-structures-n-algorithms\\sorting algorithms\\selection_sort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1402E636-03EC-48E9-939E-E8A01CB2B2DE}|Data-Structures-n-Algorithms\\Data-Structures-n-Algorithms.csproj|solutionrelative:data-structures-n-algorithms\\sorting algorithms\\selection_sort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1402E636-03EC-48E9-939E-E8A01CB2B2DE}|Data-Structures-n-Algorithms\\Data-Structures-n-Algorithms.csproj|C:\\Users\\Gabi\\source\\repos\\Data-Structures-n-Algorithms\\data-structures-n-algorithms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1402E636-03EC-48E9-939E-E8A01CB2B2DE}|Data-Structures-n-Algorithms\\Data-Structures-n-Algorithms.csproj|solutionrelative:data-structures-n-algorithms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1402E636-03EC-48E9-939E-E8A01CB2B2DE}|Data-Structures-n-Algorithms\\Data-Structures-n-Algorithms.csproj|c:\\users\\gabi\\source\\repos\\data-structures-n-algorithms\\data-structures-n-algorithms\\algorithms\\sorting algorithms\\counting sort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1402E636-03EC-48E9-939E-E8A01CB2B2DE}|Data-Structures-n-Algorithms\\Data-Structures-n-Algorithms.csproj|solutionrelative:data-structures-n-algorithms\\algorithms\\sorting algorithms\\counting sort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1402E636-03EC-48E9-939E-E8A01CB2B2DE}|Data-Structures-n-Algorithms\\Data-Structures-n-Algorithms.csproj|c:\\users\\gabi\\source\\repos\\data-structures-n-algorithms\\data-structures-n-algorithms\\algorithms\\sorting algorithms\\quick sort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1402E636-03EC-48E9-939E-E8A01CB2B2DE}|Data-Structures-n-Algorithms\\Data-Structures-n-Algorithms.csproj|solutionrelative:data-structures-n-algorithms\\algorithms\\sorting algorithms\\quick sort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,74 +22,47 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Merge_Sort.cs",
-              "DocumentMoniker": "C:\\Users\\Gabi\\source\\repos\\Data-Structures-n-Algorithms\\Data-Structures-n-Algorithms\\Sorting Algorithms\\Merge_Sort.cs",
-              "RelativeDocumentMoniker": "Data-Structures-n-Algorithms\\Sorting Algorithms\\Merge_Sort.cs",
-              "ToolTip": "C:\\Users\\Gabi\\source\\repos\\Data-Structures-n-Algorithms\\Data-Structures-n-Algorithms\\Sorting Algorithms\\Merge_Sort.cs",
-              "RelativeToolTip": "Data-Structures-n-Algorithms\\Sorting Algorithms\\Merge_Sort.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAA1wFQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T17:47:53.587Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Bubble_Sort.cs",
-              "DocumentMoniker": "C:\\Users\\Gabi\\source\\repos\\Data-Structures-n-Algorithms\\Data-Structures-n-Algorithms\\Sorting Algorithms\\Bubble_Sort.cs",
-              "RelativeDocumentMoniker": "Data-Structures-n-Algorithms\\Sorting Algorithms\\Bubble_Sort.cs",
-              "ToolTip": "C:\\Users\\Gabi\\source\\repos\\Data-Structures-n-Algorithms\\Data-Structures-n-Algorithms\\Sorting Algorithms\\Bubble_Sort.cs",
-              "RelativeToolTip": "Data-Structures-n-Algorithms\\Sorting Algorithms\\Bubble_Sort.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwDQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T17:47:43.35Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Insertion_Sort.cs",
-              "DocumentMoniker": "C:\\Users\\Gabi\\source\\repos\\Data-Structures-n-Algorithms\\Data-Structures-n-Algorithms\\Sorting Algorithms\\Insertion_Sort.cs",
-              "RelativeDocumentMoniker": "Data-Structures-n-Algorithms\\Sorting Algorithms\\Insertion_Sort.cs",
-              "ToolTip": "C:\\Users\\Gabi\\source\\repos\\Data-Structures-n-Algorithms\\Data-Structures-n-Algorithms\\Sorting Algorithms\\Insertion_Sort.cs",
-              "RelativeToolTip": "Data-Structures-n-Algorithms\\Sorting Algorithms\\Insertion_Sort.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB4AAAA7AAAAAAAAAA==",
+              "Title": "Quick Sort.cs",
+              "DocumentMoniker": "C:\\Users\\Gabi\\source\\repos\\Data-Structures-n-Algorithms\\Data-Structures-n-Algorithms\\Algorithms\\Sorting Algorithms\\Quick Sort.cs",
+              "RelativeDocumentMoniker": "Data-Structures-n-Algorithms\\Algorithms\\Sorting Algorithms\\Quick Sort.cs",
+              "ToolTip": "C:\\Users\\Gabi\\source\\repos\\Data-Structures-n-Algorithms\\Data-Structures-n-Algorithms\\Algorithms\\Sorting Algorithms\\Quick Sort.cs",
+              "RelativeToolTip": "Data-Structures-n-Algorithms\\Algorithms\\Sorting Algorithms\\Quick Sort.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T17:43:50.534Z",
+              "WhenOpened": "2024-10-14T13:26:26.905Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Selection_Sort.cs",
-              "DocumentMoniker": "C:\\Users\\Gabi\\source\\repos\\Data-Structures-n-Algorithms\\Data-Structures-n-Algorithms\\Sorting Algorithms\\Selection_Sort.cs",
-              "RelativeDocumentMoniker": "Data-Structures-n-Algorithms\\Sorting Algorithms\\Selection_Sort.cs",
-              "ToolTip": "C:\\Users\\Gabi\\source\\repos\\Data-Structures-n-Algorithms\\Data-Structures-n-Algorithms\\Sorting Algorithms\\Selection_Sort.cs",
-              "RelativeToolTip": "Data-Structures-n-Algorithms\\Sorting Algorithms\\Selection_Sort.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAAwC4AAABTAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Counting Sort.cs",
+              "DocumentMoniker": "C:\\Users\\Gabi\\source\\repos\\Data-Structures-n-Algorithms\\Data-Structures-n-Algorithms\\Algorithms\\Sorting Algorithms\\Counting Sort.cs",
+              "RelativeDocumentMoniker": "Data-Structures-n-Algorithms\\Algorithms\\Sorting Algorithms\\Counting Sort.cs",
+              "ToolTip": "C:\\Users\\Gabi\\source\\repos\\Data-Structures-n-Algorithms\\Data-Structures-n-Algorithms\\Algorithms\\Sorting Algorithms\\Counting Sort.cs",
+              "RelativeToolTip": "Data-Structures-n-Algorithms\\Algorithms\\Sorting Algorithms\\Counting Sort.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T17:19:18.85Z",
+              "WhenOpened": "2024-10-13T18:12:41.219Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Gabi\\source\\repos\\Data-Structures-n-Algorithms\\Data-Structures-n-Algorithms\\Program.cs",
               "RelativeDocumentMoniker": "Data-Structures-n-Algorithms\\Program.cs",
               "ToolTip": "C:\\Users\\Gabi\\source\\repos\\Data-Structures-n-Algorithms\\Data-Structures-n-Algorithms\\Program.cs",
               "RelativeToolTip": "Data-Structures-n-Algorithms\\Program.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAA6wC4AAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwDEAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-29T20:23:20.103Z",
               "EditorCaption": ""

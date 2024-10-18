@@ -65,6 +65,17 @@ namespace Data_Structures_n_Algorithms
                 Console.WriteLine(number);
             }
 
+            Console.WriteLine("\n");
+            Console.WriteLine("\n");
+
+
+            Data_Structures.Linear_Data_Structure.Array.Array array = new Data_Structures.Linear_Data_Structure.Array.Array(4);
+
+
+            array[3] = 76235;
+
+            Console.WriteLine(array[3]);
+
         }
     }
 }

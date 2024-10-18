@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -44,16 +45,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Algorithms\Sorting Algorithms\Counting Sort.cs" />
+    <Compile Include="Data Structures\Linear Data Structure\Array\Array.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Algorithms\Sorting Algorithms\Bubble Sort.cs" />
     <Compile Include="Algorithms\Sorting Algorithms\Insertion Sort.cs" />
     <Compile Include="Algorithms\Sorting Algorithms\Merge Sort.cs" />
     <Compile Include="Algorithms\Sorting Algorithms\Quick Sort.cs" />
     <Compile Include="Algorithms\Sorting Algorithms\Selection Sort.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data Structures\Dynamic Data Structure\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

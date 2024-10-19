@@ -20,16 +20,19 @@ namespace Data_Structures_n_Algorithms.Data_Structures.Linear_Data_Structure.Arr
 
 
             this.size = size;
-            _data = (int*)Marshal.AllocHGlobal(sizeof(int) * this.size);
+
+            // Reserve a place in memory of fixed size - 4 bytes * size of an array.
+
+            _data = (int*)Marshal.AllocHGlobal(sizeof(int) * this.size);  // Cast it to a pointer so we can access individual addresses
 
             for (int i = 0; i < this.size; i++)
             {
-                _data[i] = 0;
+                _data[i] = 0; // Assign zeros to every memory block, similar to a default array initialization
             }
             
         }
 
-        
+        // Add indexer to the list - array[i]
         public int this[int index] 
         {
 
@@ -57,6 +60,8 @@ namespace Data_Structures_n_Algorithms.Data_Structures.Linear_Data_Structure.Arr
         
         }
 
+        //Return Size of an array
+
         public int Size{
             get { return size; }
         }
@@ -67,6 +72,8 @@ namespace Data_Structures_n_Algorithms.Data_Structures.Linear_Data_Structure.Arr
             GC.SuppressFinalize(this);
             
         }
+
+        // Release the unmanaged resources
 
         protected virtual void Dispose(bool disposing) {
 
@@ -81,7 +88,7 @@ namespace Data_Structures_n_Algorithms.Data_Structures.Linear_Data_Structure.Arr
         }
 
         ~Array() {
-            Dispose(false);
+            Dispose(false);  // When the user forget to Dispose manually, garbage collector will delete it anyway
         }
 
     }

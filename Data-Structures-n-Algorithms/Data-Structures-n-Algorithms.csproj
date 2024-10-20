@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Algorithms\Sorting Algorithms\Counting Sort.cs" />
+    <Compile Include="Algorithms\Sorting Algorithms\Radix Sort.cs" />
     <Compile Include="Data Structures\Linear Data Structure\Array\Array.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Algorithms\Sorting Algorithms\Bubble Sort.cs" />

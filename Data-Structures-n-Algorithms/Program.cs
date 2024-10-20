@@ -57,8 +57,12 @@ namespace Data_Structures_n_Algorithms
 
             /* ---------- Counting Sort ---------- */
 
-            listOfNumbers = Counting_Sort.Counting(listOfNumbers);
+            //listOfNumbers = Counting_Sort.Counting(listOfNumbers);
 
+
+            /* ---------- Radix Sort ---------- */
+
+            Radix_Sort.Radix(listOfNumbers,listOfNumbers.Length);
 
             foreach (var number in listOfNumbers)
             {
@@ -68,6 +72,8 @@ namespace Data_Structures_n_Algorithms
             Console.WriteLine("\n");
             Console.WriteLine("\n");
 
+
+            Console.ReadLine();
 
             Data_Structures.Linear_Data_Structure.Array.Array array = new Data_Structures.Linear_Data_Structure.Array.Array(4);
 

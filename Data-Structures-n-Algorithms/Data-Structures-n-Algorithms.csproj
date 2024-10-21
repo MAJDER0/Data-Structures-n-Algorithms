@@ -46,7 +46,8 @@
   <ItemGroup>
     <Compile Include="Algorithms\Sorting Algorithms\Counting Sort.cs" />
     <Compile Include="Algorithms\Sorting Algorithms\Radix Sort.cs" />
-    <Compile Include="Data Structures\Linear Data Structure\Array\Array.cs" />
+    <Compile Include="Data Structures\Linear Data Structure\Dynamic Data Structure\Linked List\Singly Linked List.cs" />
+    <Compile Include="Data Structures\Linear Data Structure\Static Data Structure\Array\Array.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Algorithms\Sorting Algorithms\Bubble Sort.cs" />
     <Compile Include="Algorithms\Sorting Algorithms\Insertion Sort.cs" />
@@ -58,8 +59,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Data Structures\Dynamic Data Structure\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

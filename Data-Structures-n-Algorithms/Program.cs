@@ -1,4 +1,5 @@
 ﻿using Data_Structures_n_Algorithms.Algorithms.Sorting_Algorithms;
+using Data_Structures_n_Algorithms.Data_Structures.Dynamic_Data_Structure.Linked_List;
 using Data_Structures_n_Algorithms.Sorting_Algorithms;
 using System;
 using System.Collections.Generic;
@@ -71,9 +72,7 @@ namespace Data_Structures_n_Algorithms
 
             Console.WriteLine("\n");
             Console.WriteLine("\n");
-
-
-            Console.ReadLine();
+ 
 
             Data_Structures.Linear_Data_Structure.Array.Array array = new Data_Structures.Linear_Data_Structure.Array.Array(4);
 
@@ -81,6 +80,21 @@ namespace Data_Structures_n_Algorithms
             array[3] = 76235;
 
             Console.WriteLine(array[3]);
+
+
+            Console.WriteLine("///////");
+
+            Singly_Linked_List linkedlist = new Singly_Linked_List();
+
+            linkedlist.InsertAtHead(4);
+            linkedlist.Append(8);
+            linkedlist.Append(5);
+            linkedlist.Append(2);
+            linkedlist.Display();
+            linkedlist.Remove(8);
+            linkedlist.Display();
+
+            Console.ReadLine();
 
         }
     }

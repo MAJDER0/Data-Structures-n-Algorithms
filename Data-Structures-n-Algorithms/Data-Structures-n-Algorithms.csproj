@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Algorithms\Sorting Algorithms\Bucket Sort.cs" />
     <Compile Include="Algorithms\Sorting Algorithms\Counting Sort.cs" />
     <Compile Include="Algorithms\Sorting Algorithms\Radix Sort.cs" />
     <Compile Include="Data Structures\Linear Data Structure\Dynamic Data Structure\Linked List\Singly Linked List.cs" />

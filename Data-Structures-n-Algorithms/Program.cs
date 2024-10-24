@@ -94,6 +94,12 @@ namespace Data_Structures_n_Algorithms
             linkedlist.Remove(8);
             linkedlist.Display();
 
+            linkedlist.Reverse();
+            linkedlist.Display();
+
+            linkedlist.InsertAtPosition(45,2);
+            linkedlist.Display();
+
             Console.ReadLine();
 
         }

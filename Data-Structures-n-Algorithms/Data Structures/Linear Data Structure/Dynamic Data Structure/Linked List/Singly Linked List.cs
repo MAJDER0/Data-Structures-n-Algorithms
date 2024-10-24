@@ -36,6 +36,78 @@ namespace Data_Structures_n_Algorithms.Data_Structures.Dynamic_Data_Structure.Li
             head = newNode;
         }
 
+        public void InsertAtPosition(int data, int position) {
+
+            if (position < 0)
+                return;
+
+            Node* newNode = (Node*)Marshal.AllocHGlobal(sizeof(Node));
+            newNode->Data = data;
+            newNode->Next = null;
+
+            if (position == 0) {
+
+                newNode->Next = head;
+                head = newNode;
+                return;
+
+            }
+
+            Node* current = head;
+            int counter = 0;
+
+            while (current != null && counter < position - 1) {
+                current = current->Next;
+                counter++;
+            }
+
+            if (current == null) {
+
+                Marshal.FreeHGlobal((IntPtr)newNode);
+                return;
+
+            }
+
+            newNode->Next = current->Next;
+            current->Next = newNode;
+
+        }
+
+        public int Get(int position) {
+
+            if (position < 0)
+                return -1;
+
+            Node* current = head;
+
+            int index = 0;
+
+            while (current != null) {
+
+                if (index == position) {
+                    return current->Data;
+                }
+                current = current->Next;
+                index++;
+            }
+
+            return -1;
+        
+        }
+
+        public void Clear() {
+
+            Node* current = head;
+
+            while (current != null) {
+                Node* temp = current;
+                current = current->Next;
+                Marshal.FreeHGlobal((IntPtr)temp);
+            }
+
+            head = null;    
+        }
+
         public void Append(int data) {
 
             Node* newNode = (Node*)Marshal.AllocHGlobal(sizeof(Node));
@@ -58,6 +130,25 @@ namespace Data_Structures_n_Algorithms.Data_Structures.Dynamic_Data_Structure.Li
             }
 
             current->Next = newNode;
+        }
+
+        public int getLength() {
+
+            if (head == null)
+                return 0;
+
+            Node* current = head;
+
+            int* size = stackalloc int[1];
+            size[0] = 0;
+
+            while (current != null) {
+                size[0]++;
+                current = current->Next;
+            }
+
+            return size[0];
+        
         }
 
         public bool Remove(int data) {

@@ -21,7 +21,7 @@ namespace Data_Structures_n_Algorithms.Sorting_Algorithms
         //Space Complexity: O(1)
 
 
-        //Implementation for an array of integers
+        //Implementation for an array of Integers
 
         public static int[] Bubble(int[] listOfNumbers) {
 

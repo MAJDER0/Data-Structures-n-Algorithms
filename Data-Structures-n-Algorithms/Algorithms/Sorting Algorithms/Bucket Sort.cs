@@ -9,9 +9,18 @@ namespace Data_Structures_n_Algorithms.Algorithms.Sorting_Algorithms
 {
     public class Bucket_Sort
     {
+        //Time Complexity:
+
+        //Worst Case: O(n^2) or O(nlogn) if we use merge sort
+        //Average Case: O(n + k) 
+        //Best Case: O(n + k)
+
+        //Space Complexity: O(n+k)
+
 
         public static void Bucket(float[] arrayOfNumbers) {
 
+            //Each bucket is a list of floats
             List<float>[] buckets = new List<float>[arrayOfNumbers.Length];
 
             for (int i = 0; i < arrayOfNumbers.Length; i++) {
@@ -20,6 +29,7 @@ namespace Data_Structures_n_Algorithms.Algorithms.Sorting_Algorithms
 
             }
 
+            //Put numbers into right buckets
             for (int i = 0; i < buckets.Length; i++) { 
             
                 int key = (int)(arrayOfNumbers[i] * arrayOfNumbers.Length);
@@ -32,6 +42,7 @@ namespace Data_Structures_n_Algorithms.Algorithms.Sorting_Algorithms
 
             int index = 0;
 
+            //Merge sorted buckets into the original array
             for (int i = 0; i < arrayOfNumbers.Length; i++) {
                 for (int j = 0; j < buckets[i].Count(); j++) {
 

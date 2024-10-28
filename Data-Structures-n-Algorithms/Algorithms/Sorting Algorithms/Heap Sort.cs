@@ -6,54 +6,53 @@ using System.Threading.Tasks;
 
 namespace Data_Structures_n_Algorithms.Algorithms.Sorting_Algorithms
 {
+    //Time Complexity:
+
+    //Worst Case: O(nlogn)
+    //Average Case: O(nlogn)
+    //Best Case: O(nlogn)
+
+    //Space Complexity: O(logn)
+
+    //Implementation for an array of integers
     public class Heap_Sort
     {
-       public static void Heap(int[] arr)
+       public static void Heap(int[] arrayOfNumbers)
        {
-            int n = arr.Length;
+            int length = arrayOfNumbers.Length;
 
-            for (int i = n / 2 - 1; i >= 0; i--)
-            {
-                Heapify(arr, n, i);
+            for (int i = length / 2 - 1; i >=0; i--) {
+
+                Heapify(arrayOfNumbers,length,i);
+
             }
 
-            for (int i = n - 1; i > 0; i--)
-            {
+            for (int i = length - 1; i > 0; i--) {
 
-                int temp = arr[0];
-                arr[0] = arr[i];
-                arr[i] = temp;
+                (arrayOfNumbers[0], arrayOfNumbers[i]) = (arrayOfNumbers[i], arrayOfNumbers[0]);
+                Heapify(arrayOfNumbers,i,0);
 
-                Heapify(arr, i, 0);
             }
+
        }
 
-        private static void Heapify(int[] arr, int n, int i)
+        private static void Heapify(int[] arrayOfnumbers, int length, int currentNodeIndex)
         {
+            int largest = currentNodeIndex;
 
-            int largest = i;
+            int left = 2 * currentNodeIndex + 1;
+            int right = 2* currentNodeIndex + 2;
 
-            int l = 2 * i + 1;
+            if (left < length && arrayOfnumbers[left] > arrayOfnumbers[largest]) 
+                largest = left;
 
-            int r = 2 * i + 2;
+            if(right < length && arrayOfnumbers[right] > arrayOfnumbers[largest])
+                largest = right;
 
-            if (l < n && arr[l] > arr[largest])
-            {
-                largest = l;
-            }
+            if (largest != currentNodeIndex) {
 
-            if (r < n && arr[r] > arr[largest])
-            {
-                largest = r;
-            }
-
-            if (largest != i)
-            {
-                int temp = arr[i]; 
-                arr[i] = arr[largest];
-                arr[largest] = temp;
-
-                Heapify(arr, n, largest);
+                (arrayOfnumbers[currentNodeIndex], arrayOfnumbers[largest]) = (arrayOfnumbers[largest], arrayOfnumbers[currentNodeIndex]);
+                Heapify(arrayOfnumbers,length,largest);
             }
         }
     }

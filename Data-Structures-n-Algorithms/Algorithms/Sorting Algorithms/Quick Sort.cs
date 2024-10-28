@@ -22,7 +22,7 @@ namespace Data_Structures_n_Algorithms.Sorting_Algorithms
         //Average Case: O(nlogn) the pivot divides the array into two parts, but not necessarily equal
         //Best Case: O(nlogn) when the pivot element divides the array into two equal halves
 
-        //Space Complexity O(n)
+        //Space Complexity: O(n)
 
         //Implementation for an array of integers
 

@@ -51,6 +51,7 @@
     <Compile Include="Algorithms\Sorting Algorithms\Shell Sort.cs" />
     <Compile Include="Data Structures\Linear Data Structure\Dynamic Data Structure\Linked List\Singly Linked List.cs" />
     <Compile Include="Data Structures\Linear Data Structure\Static Data Structure\Array\Array.cs" />
+    <Compile Include="Data Structures\Non-linear Data Structure\Tree\Binary Tree.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Algorithms\Sorting Algorithms\Bubble Sort.cs" />
     <Compile Include="Algorithms\Sorting Algorithms\Insertion Sort.cs" />

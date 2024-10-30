@@ -8,6 +8,55 @@ namespace Data_Structures_n_Algorithms.Data_Structures.Non_linear_Data_Structure
 {
     public class Binary_Tree
     {
+
+        //Terminology
+
+        /*
+          
+        Nodes - The fundamental part of a binary tree, where each node contains data
+        and link to two child nodes
+
+        Root - The topmost node in a tree is known as the root node. It has no parent
+        and serves as the starting point for all nodes in the tree
+
+        Parent Node - A node that has one or more child nodes. In a binary tree, each
+        node can have at most two children
+
+        Child Node - A node that is a descendant of another node (its parent)
+
+        Leaf Node - A node that does not have any children or both children are null
+
+        Internal Node - A node that has at least one child. This includes all nodes 
+        except the root and the leaf nodes
+
+        Depth of a Node - The number of edges from a specific node to the root node. 
+        The depth of the root node is zero
+
+        Height of a Binary Tree - The number of nodes from the deepest leaf node to 
+        the root node
+
+        */
+
+
+        //Traversals
+
+
+        /* 
+         
+        Depth-First Search (DFS) algorithms:
+       
+        DFS explores as far down a branch as possible before backtracking.
+        It is implemented using recursion. The main traversal methods in DFS for 
+        binary trees are: Preorder Traversal, Inorder Traversal, Postorder Traversal
+
+        Depth-First Search (BFS) algorithms:
+
+        BFS explores all nodes at present depth before moving on to nodes at the next depth level. 
+        It is typically implemented using a queue. BFS in a binary search tree is commonly referred
+        to as Level Order Traversal
+
+        */
+
         private Node root;
         public class Node {
 
@@ -27,24 +76,6 @@ namespace Data_Structures_n_Algorithms.Data_Structures.Non_linear_Data_Structure
         {
             root = null;
         }
-
-        //Traversals
-
-        /* 
-         
-        Depth-First Search (DFS) algorithms:
-       
-        DFS explores as far down a branch as possible before backtracking.
-        It is implemented using recursion. The main traversal methods in DFS for 
-        binary trees are: Preorder Traversal, Inorder Traversal, Postorder Traversal
-
-        Depth-First Search (BFS) algorithms:
-
-        BFS explores all nodes at present depth before moving on to nodes at the next depth level. 
-        It is typically implemented using a queue. BFS in a binary search tree is commonly referred
-        to as Level Order Traversal
-
-        */
 
         // In-order DFS: Left, Root, Right
         public void InOrderDFS() {

@@ -8,6 +8,7 @@ namespace Data_Structures_n_Algorithms.Data_Structures.Non_linear_Data_Structure
 {
     public class Binary_Tree
     {
+        private Node root;
         public class Node {
 
             public int data;
@@ -20,6 +21,11 @@ namespace Data_Structures_n_Algorithms.Data_Structures.Non_linear_Data_Structure
                 left = right = null;
             }
 
+        }
+
+        public Binary_Tree()
+        {
+            root = null;
         }
 
         //Traversals
@@ -39,33 +45,45 @@ namespace Data_Structures_n_Algorithms.Data_Structures.Non_linear_Data_Structure
         to as Level Order Traversal
 
         */
-        
+
         // In-order DFS: Left, Root, Right
-        public static void InOrderDFS(Node node) {
+        public void InOrderDFS() {
+            InOrderDFS(root);
+        }
+        private void InOrderDFS(Node node) {
             if (node == null) return;
             InOrderDFS(node.left);         
-            Console.WriteLine(node.data + " ");  // Do anything with data e.g Display
+            Console.Write(node.data + " ");  // Do anything with data e.g Display
             InOrderDFS(node.right);
         }
 
         // Pre-order DFS: Root, Left, Right
-        public static void PreOrderDFS(Node node) {
+        public void PreOrderDFS() {
+            PreOrderDFS(root);
+        }
+        private void PreOrderDFS(Node node) {
             if (node == null) return;
-            Console.WriteLine(node.data + " ");
+            Console.Write(node.data + " ");
             PreOrderDFS(node.left);
             PreOrderDFS(node.right);            
         }
 
         // Post-order DFS: Left, Right, Root
-        public static void PostOrderDFS(Node node) {
+        public void PostOrderDFS() { 
+            PostOrderDFS(root);
+        }
+        private void PostOrderDFS(Node node) {
             if (node == null) return;
             PostOrderDFS(node.left);
             PostOrderDFS(node.right);
-            Console.WriteLine(node.data + " ");
+            Console.Write(node.data + " ");
         }
 
         // BFS Level Order Traversal
-        public static void LevelOrderTraversalBFS(Node root) {
+        public void LevelOrderTraversalBFS() {
+            LevelOrderTraversalBFS(root);
+        }
+        private void LevelOrderTraversalBFS(Node root) {
             if (root == null) return;
             Queue<Node> queue = new Queue<Node>();
             queue.Enqueue(root);
@@ -73,7 +91,7 @@ namespace Data_Structures_n_Algorithms.Data_Structures.Non_linear_Data_Structure
             while (queue.Count > 0) {
                 Node node = queue.Dequeue();
 
-                Console.WriteLine(node.data + " ");
+                Console.Write(node.data + " ");
 
                 if(node.left != null) 
                     queue.Enqueue(node.left);
@@ -81,6 +99,53 @@ namespace Data_Structures_n_Algorithms.Data_Structures.Non_linear_Data_Structure
                 if(node.right!=null)
                     queue.Enqueue(node.right);
             }
-        } 
+        }
+
+        public void Add(int data) {
+
+            if (root == null) {
+                root = new Node(data);
+                return;
+            }
+
+            Queue<Node> queue = new Queue<Node>();
+
+            queue.Enqueue(root);
+
+            while (queue.Count > 0) {
+
+                Node currentNode = queue.Dequeue();
+
+                if (currentNode.left == null) {
+                    currentNode.left = new Node(data);
+                    return;
+                } else {
+                    queue.Enqueue(currentNode.left);
+                }
+
+                if (currentNode.right == null) {
+                    currentNode.right = new Node(data);
+                    return;
+                } else {
+                    queue.Enqueue(currentNode.right);
+                }
+            }
+        }
+
+        //Search for the value in Binary Tree using DFS
+        public bool SearchDFS(int value) {
+           return SearchDFS(root, value);
+        }
+        private bool SearchDFS(Node root, int value) {
+
+            if (root == null) return false;    
+
+            if(root.data == value) return true;
+
+            bool leftSubTree = SearchDFS(root.left, value);
+            bool rightSubTree = SearchDFS(root.right, value);
+
+            return leftSubTree || rightSubTree;
+        }
     }
 }

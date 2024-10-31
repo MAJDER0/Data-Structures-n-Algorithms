@@ -57,6 +57,8 @@ namespace Data_Structures_n_Algorithms.Data_Structures.Non_linear_Data_Structure
 
         */
 
+        // This is a general overview of a binary tree. There is no particular order of nodes
+
         private Node root;
         public class Node {
 
@@ -177,6 +179,59 @@ namespace Data_Structures_n_Algorithms.Data_Structures.Non_linear_Data_Structure
             bool rightSubTree = SearchDFS(root.right, value);
 
             return leftSubTree || rightSubTree;
+        }
+
+        //Delete node from the binary tree
+        public void Delete(int value)
+        {
+            root = Delete(root, value);
+        }
+
+        private Node Delete(Node root, int value)
+        {
+            if (root == null) return null;
+
+            Queue<Node> q = new Queue<Node>();
+            q.Enqueue(root);
+            Node target = null;
+
+            while (q.Count > 0) {
+                Node curr = q.Dequeue();
+
+                if (curr.data == value) {
+                    target = curr;
+                }
+
+                if (curr.left != null) q.Enqueue(curr.left);
+
+                if (curr.right != null) q.Enqueue(curr.right);
+            }
+
+            if (target == null) return root;
+
+            Node lastNode = null;
+            Node lastParent = null;
+            Queue<(Node, Node)> q1 = new Queue<(Node, Node)>();
+            q1.Enqueue((root, null));
+
+            while (q1.Count > 0) { 
+                var (curr, parent) = q1.Dequeue();
+                lastNode = curr;
+                lastParent = parent;
+
+                if (curr.left != null) q1.Enqueue((curr.left, curr));
+                if (curr.right != null) q1.Enqueue((curr.right, curr));
+            }
+
+            target.data = lastNode.data;
+
+            if (lastParent != null) {
+                if (lastParent.left == lastNode) lastParent.left = null;
+                else lastParent.right = null;
+            } else {
+                return null;
+            }
+            return root;
         }
     }
 }

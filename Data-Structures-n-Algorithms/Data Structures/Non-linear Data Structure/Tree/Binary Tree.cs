@@ -38,8 +38,37 @@ namespace Data_Structures_n_Algorithms.Data_Structures.Non_linear_Data_Structure
         */
 
 
-        //Traversals
+        //Properties of Binary Tree
 
+        /*
+         
+        The maximum number of nodes ar level L of a Binary Tree is 2^L
+
+        The maximum number of nodes in a Binary Tree of height H is 2^H - 1
+
+        Total number of leaf nodes in a Binary Tree = total number of nodes with 2 children + 1
+
+        In a Binary Tree with N nodes, the minimum possible height or the minimum number of levels is log2(N + 1)
+
+        A Binary Tree with L leaves has at least |log2L| + 1 levels
+
+        */
+
+
+        //Types of Binary Tree
+
+        /*
+        
+        On the basis of number of children: Full Binary Tree, Degenerate Binary Tree, Skewed Binary Tree
+
+        On the basis of Completion of levels: Complete Binary Tree, Perfect Binary Tree, Balanced Binary Tree
+
+        On the basis of Node values: Binary Search Tree, AVL Tree, Red Black Tree, B Tree, B+ Tree, Segment Tree
+
+        */ 
+
+
+        //Traversals
 
         /* 
          
@@ -49,6 +78,7 @@ namespace Data_Structures_n_Algorithms.Data_Structures.Non_linear_Data_Structure
         It is implemented using recursion. The main traversal methods in DFS for 
         binary trees are: Preorder Traversal, Inorder Traversal, Postorder Traversal
 
+
         Depth-First Search (BFS) algorithms:
 
         BFS explores all nodes at present depth before moving on to nodes at the next depth level. 
@@ -56,6 +86,7 @@ namespace Data_Structures_n_Algorithms.Data_Structures.Non_linear_Data_Structure
         to as Level Order Traversal
 
         */
+
 
         // This is a general overview of a binary tree. There is no particular order of nodes
 
@@ -187,40 +218,47 @@ namespace Data_Structures_n_Algorithms.Data_Structures.Non_linear_Data_Structure
             root = Delete(root, value);
         }
 
-        private Node Delete(Node root, int value)
-        {
+        private Node Delete(Node root, int value) {
+
             if (root == null) return null;
 
-            Queue<Node> q = new Queue<Node>();
-            q.Enqueue(root);
+            Queue<Node> queue = new Queue<Node>();
+
             Node target = null;
 
-            while (q.Count > 0) {
-                Node curr = q.Dequeue();
+            queue.Enqueue(root);
 
-                if (curr.data == value) {
-                    target = curr;
-                }
+            while (queue.Count > 0) { 
+                
+                Node currentValue = queue.Dequeue();
 
-                if (curr.left != null) q.Enqueue(curr.left);
+                if (currentValue != null && currentValue.data == value) 
+                    target = currentValue;
 
-                if (curr.right != null) q.Enqueue(curr.right);
+                if (currentValue.left != null) queue.Enqueue(currentValue.left);
+
+                if (currentValue.right != null) queue.Enqueue(currentValue.right);
             }
 
             if (target == null) return root;
 
-            Node lastNode = null;
             Node lastParent = null;
-            Queue<(Node, Node)> q1 = new Queue<(Node, Node)>();
-            q1.Enqueue((root, null));
+            Node lastNode = null;
 
-            while (q1.Count > 0) { 
-                var (curr, parent) = q1.Dequeue();
-                lastNode = curr;
-                lastParent = parent;
+            Queue<(Node, Node)> NextQueue = new Queue<(Node, Node)>();
 
-                if (curr.left != null) q1.Enqueue((curr.left, curr));
-                if (curr.right != null) q1.Enqueue((curr.right, curr));
+            NextQueue.Enqueue((root, null));
+
+            while (NextQueue.Count > 0) {
+
+                (Node currentNode, Node currentParent) = NextQueue.Dequeue();
+
+                lastParent = currentParent;
+
+                lastNode = currentNode;
+
+                if (currentNode.left != null) NextQueue.Enqueue((currentNode.left, currentNode));
+                if (currentNode.right != null) NextQueue.Enqueue((currentNode.right, currentNode));
             }
 
             target.data = lastNode.data;
@@ -228,10 +266,12 @@ namespace Data_Structures_n_Algorithms.Data_Structures.Non_linear_Data_Structure
             if (lastParent != null) {
                 if (lastParent.left == lastNode) lastParent.left = null;
                 else lastParent.right = null;
-            } else {
+            }
+            else {
                 return null;
             }
+
             return root;
-        }
+        }       
     }
 }

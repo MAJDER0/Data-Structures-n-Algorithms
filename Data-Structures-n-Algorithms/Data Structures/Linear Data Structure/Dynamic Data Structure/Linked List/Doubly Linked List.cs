@@ -167,5 +167,34 @@ namespace Data_Structures_n_Algorithms.Data_Structures.Linear_Data_Structure.Dyn
                     currentNode.nextNode.previousNode = currentNode.previousNode;
             }
         }
+
+        public int GetLength() {
+
+            if (head == null) return 0;
+
+            Node currentNode = head;
+            int counter = 0;
+
+            while (currentNode != null) {
+                currentNode = currentNode.nextNode;
+                counter++;
+            }
+
+            return counter;
+        }
+
+        public void ForwardTraversal() {
+
+            if (head == null) return;
+
+            Node currentNode = head;
+
+            while (currentNode != null) {
+                Console.Write(currentNode.Data + " ");
+                currentNode = currentNode.nextNode;
+            }
+
+            Console.WriteLine();
+        }
     }
 }

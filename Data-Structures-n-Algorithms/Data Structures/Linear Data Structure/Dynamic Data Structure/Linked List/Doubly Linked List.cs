@@ -37,11 +37,11 @@ namespace Data_Structures_n_Algorithms.Data_Structures.Linear_Data_Structure.Dyn
 
         public void InsertAtEnd(int data) {
 
-            Node NewNode = new Node() { 
+            Node NewNode = new Node() {
                 nextNode = null,
                 previousNode = null,
-                Data = data 
-            }; 
+                Data = data
+            };
 
             if (head == null) {
                 head = NewNode;
@@ -65,7 +65,7 @@ namespace Data_Structures_n_Algorithms.Data_Structures.Linear_Data_Structure.Dyn
             {
                 if (index == 0) {
                     InsertAtBeginning(data);
-                }else {
+                } else {
                     return;
                 }
                 return;
@@ -102,6 +102,70 @@ namespace Data_Structures_n_Algorithms.Data_Structures.Linear_Data_Structure.Dyn
             }
 
             currentNode.nextNode = node;
+        }
+
+        public void DeleteAtBeginning() {
+
+            if (head == null) return;
+
+            if (head.nextNode != null){
+                head = head.nextNode;
+                head.previousNode = null;
+                return;
+            }
+
+            head = null;
+        }
+
+        public void DeleteAtEnd() {      
+            
+            if (head == null) return;
+
+            if (head.nextNode == null) {
+                head = null;
+                return; 
+            }
+
+            Node currentNode = head;
+
+            while (currentNode.nextNode != null) {
+                currentNode = currentNode.nextNode;
+            }
+            if (currentNode.previousNode != null) currentNode.previousNode.nextNode = null;
+
+            currentNode = null;
+        }
+
+        public void DeleteAtIndex(int index) {
+
+            if (head == null || index < 0) return;
+
+            if (index == 0) {
+                DeleteAtBeginning();
+                return;
+            } 
+            
+            Node currentNode = head;
+            int counter = 0;
+
+            while (currentNode != null && counter < index) {
+                currentNode = currentNode.nextNode;
+                counter++;
+            }
+
+            if (currentNode == null) return;
+
+            if (currentNode.nextNode == null) {
+                if (currentNode.previousNode != null)
+                    currentNode.previousNode.nextNode = null;
+            } else {
+
+                if (currentNode.previousNode != null) 
+                    currentNode.previousNode.nextNode = currentNode.nextNode;                   
+                
+                if(currentNode.nextNode != null)
+                    currentNode.nextNode.previousNode = currentNode.previousNode;
+            }
         }
     }
 }

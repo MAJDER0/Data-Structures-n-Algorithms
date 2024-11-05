@@ -4,10 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Data_Structures_n_Algorithms.Data_Structures.Non_linear_Data_Structure.Tree
+namespace Data_Structures_n_Algorithms.Data_Structures.Non_linear_Data_Structure.Tree.Binary_Tree
 {
     public class Binary_Tree
     {
+
+        //A binary tree is a tree data structure with a maximum of 2 children per node.
+        //We commonly refer to them as the left and right child as each element in a
+        //binary tree may only have two children.
+
+        //Binary Tree is a non-linear data structure where each node has at most two children. 
+
 
         //Terminology
 
@@ -65,7 +72,7 @@ namespace Data_Structures_n_Algorithms.Data_Structures.Non_linear_Data_Structure
 
         On the basis of Node values: Binary Search Tree, AVL Tree, Red Black Tree, B Tree, B+ Tree, Segment Tree
 
-        */ 
+        */
 
 
         //Traversals

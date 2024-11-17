@@ -53,6 +53,8 @@
     <Compile Include="Data Structures\Linear Data Structure\Dynamic Data Structure\Linked List\Singly Linked List.cs" />
     <Compile Include="Data Structures\Linear Data Structure\Static Data Structure\Array\Array.cs" />
     <Compile Include="Data Structures\Non-linear Data Structure\Tree\Binary Tree\Binary Tree.cs" />
+    <Compile Include="Data Structures\Non-linear Data Structure\Tree\Binary Tree\On the basis of Completion of Levels\Complete Binary Tree.cs" />
+    <Compile Include="Data Structures\Non-linear Data Structure\Tree\Binary Tree\On the basis of Completion of Levels\Perfect Binary Tree.cs" />
     <Compile Include="Data Structures\Non-linear Data Structure\Tree\Binary Tree\On the basis of Number of Children\Degenerate Binary Tree.cs" />
     <Compile Include="Data Structures\Non-linear Data Structure\Tree\Binary Tree\On the basis of Number of Children\Full Binary Tree.cs" />
     <Compile Include="Program.cs" />

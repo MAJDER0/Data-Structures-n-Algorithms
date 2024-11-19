@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -75,9 +76,50 @@ namespace Data_Structures_n_Algorithms.Data_Structures.Non_linear_Data_Structure
             }
         }
 
-        public Perfect_Binary_Tree()
+        public Perfect_Binary_Tree(int depth)
         {
-            root = null; 
+            root = ConstructPerfectBinaryTree(1, (int)Math.Pow(2, depth + 1) - 1);
+        }
+
+        private Node ConstructPerfectBinaryTree(int currentIndex, int totalNodes) {
+
+            if (currentIndex > totalNodes) return null;
+
+            Node node = new Node(0);
+            node.left = ConstructPerfectBinaryTree(2 * currentIndex, totalNodes);
+            node.right = ConstructPerfectBinaryTree(2 * currentIndex + 1, totalNodes);
+            return node;
+        }
+        public bool IsPerfectBinaryTree() {
+
+            int depth = CalculateDepth(root);
+            return ValidatePerfectBinaryTree(root, depth, 0);
+        }
+
+        private int CalculateDepth(Node node) {
+
+            int depth = 0;
+
+            while (node != null) {
+                depth++;
+                node = node.left;
+            }
+
+            return depth;
+        }
+
+        private bool ValidatePerfectBinaryTree(Node node, int depth, int level) {
+
+            if (node == null) return true;
+
+            if (node.left == null && node.right == null)
+                return depth == level + 1;
+
+            if (node.left == null || node.right == null)
+                return false;
+
+            return ValidatePerfectBinaryTree(node.left, depth, level + 1) && ValidatePerfectBinaryTree(node.right, depth, level + 1);
         }
     }
 }
+

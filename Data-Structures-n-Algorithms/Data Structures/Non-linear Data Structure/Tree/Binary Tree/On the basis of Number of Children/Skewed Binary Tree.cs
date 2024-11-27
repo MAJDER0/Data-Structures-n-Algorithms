@@ -32,16 +32,39 @@ namespace Data_Structures_n_Algorithms.Data_Structures.Non_linear_Data_Structure
 
         private Node root;
 
+        public Skewed_Binary_Tree()
+        {
+            root = null;
+        }
+
         public class Node {
 
             public int data;
             public Node left;
-            public Node right;
 
             public Node(int value)
             {
                  data = value;
+                 left = null;
             }
+        }
+
+        public void Add(int value) {
+
+            if (root == null)
+            { 
+                root = new Node(value);
+                return;
+            }
+
+            Node current = root;
+
+            while (current.left != null)
+            {
+                current = current.left;
+            }
+
+            current.left = new Node(value);
         }
     }
 }

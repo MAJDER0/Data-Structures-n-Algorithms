@@ -54,6 +54,7 @@
     <Compile Include="Data Structures\Linear Data Structure\Static Data Structure\Array\Array.cs" />
     <Compile Include="Data Structures\Linear Data Structure\Static Data Structure\Array\Problems\Easy\Remove Element.cs" />
     <Compile Include="Data Structures\Linear Data Structure\Static Data Structure\Array\Problems\Easy\Roman To Integer.cs" />
+    <Compile Include="Data Structures\Linear Data Structure\Static Data Structure\Array\Problems\Easy\Search Insert Position.cs" />
     <Compile Include="Data Structures\Linear Data Structure\Static Data Structure\Array\Problems\Easy\Two Sum.cs" />
     <Compile Include="Data Structures\Linear Data Structure\Static Data Structure\Array\Problems\Medium\3Sum.cs" />
     <Compile Include="Data Structures\Non-linear Data Structure\Tree\Binary Tree\Binary Tree.cs" />

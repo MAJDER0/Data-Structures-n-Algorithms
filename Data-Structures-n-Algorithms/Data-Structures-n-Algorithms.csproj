@@ -53,6 +53,7 @@
     <Compile Include="Data Structures\Linear Data Structure\Dynamic Data Structure\Linked List\Singly Linked List.cs" />
     <Compile Include="Data Structures\Linear Data Structure\Static Data Structure\Array\Array.cs" />
     <Compile Include="Data Structures\Linear Data Structure\Static Data Structure\Array\Problems\Easy\Contains Duplicate.cs" />
+    <Compile Include="Data Structures\Linear Data Structure\Static Data Structure\Array\Problems\Easy\Merge Sorted Array.cs" />
     <Compile Include="Data Structures\Linear Data Structure\Static Data Structure\Array\Problems\Easy\Remove Element.cs" />
     <Compile Include="Data Structures\Linear Data Structure\Static Data Structure\Array\Problems\Easy\Roman To Integer.cs" />
     <Compile Include="Data Structures\Linear Data Structure\Static Data Structure\Array\Problems\Easy\Search Insert Position.cs" />
